@@ -196,11 +196,32 @@ running = false;
 
 ```bash
 Scanner scanner = new Scanner(System.in);
-System.out.print("Masukkan Nama Mahasiswa ke-" + (i + 1) + ": ");
-String nama = scanner.nextLine();
+Scanner input = new Scanner(System.in);
 
-System.out.println("\nData Mahasiswa:");
-System.out.println(mahasiswa.displayInfo());
+            System.out.println("Pelanggan Ke : ");
+            String pembeli = scanner.nextLine();
+            System.out.println("");
+            System.out.println("Nama Customer: ");
+            String namaPembeli = scanner.nextLine();
+            System.out.println("");
+            System.out.println("Pilih Kain Sesuai Kode : ");
+            System.out.println("Batik.............(btk)");
+            System.out.println("Sasirangan........(ssr)");
+            System.out.println("Songket...........(skt)");
+            String jenis = scanner.nextLine();
+            System.out.println("Jumlah Meter Kain Yang Di Beli (angka) : ");
+            int jumlahMeter = input.nextInt();
+            System.out.println("");
+            System.out.println("Masukkan Tanggal : ");
+            String tanggal = scanner.nextLine();
+            System.out.println("");
+            System.out.println("Cetak Struk?");
+            System.out.print("YA/TIDAK (Untuk Data Baru): ");
+            
+            jawab = scanner.nextLine();
+            if(jawab.equalsIgnoreCase("ya")){
+                running = false;
+            }
 ```
 
 13. **Array** adalah struktur data yang digunakan untuk menyimpan beberapa nilai dalam satu variabel. Pada kode ini, `KainDetail[] kn = new KainDetail[2];` adalah contoh penggunaan array.
