@@ -161,7 +161,7 @@ public String displayInfo(String alamat){
     }
 ```
 
-10. **Seleksi** adalah statement kontrol yang digunakan untuk membuat keputusan berdasarkan kondisi. Pada kode ini, digunakan  seleksi `switch` dalam method `getJenis`.
+10. **Seleksi** adalah statement kontrol yang digunakan untuk membuat keputusan berdasarkan kondisi. Pada kode ini, digunakan  seleksi `switch` dalam method `getPilihKain`.
 
 ```bash
 public String  getPilihKain(){
