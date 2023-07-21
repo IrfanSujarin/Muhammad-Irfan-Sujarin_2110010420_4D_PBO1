@@ -37,12 +37,12 @@ kn[0] = new KainDetail(pembeli, namaPembeli, jenis, tanggal, total, jumlahMeter 
 3. **Atribut** adalah variabel yang ada dalam class. Pada kode ini, `pembeli`, `namaPembeli`, `jenis`, `tanggal`, `total` dan `jumlahMeter` adalah contoh atribut.
 
 ```bash
-    String pembeli;
-    String namaPembeli;
-    String jenis;
-    String tanggal;
-    int total;
-    int jumlahMeter;
+    private String pembeli;
+    private String namaPembeli;
+    private String jenis;
+    private String tanggal;
+    private int total;
+    private int jumlahMeter;
 ```
 
 4. **Constructor** adalah method yang pertama kali dijalankan pada saat pembuatan object. Pada kode ini, constructor ada di dalam class `Kain` dan `KainDetail`.
@@ -183,8 +183,11 @@ public String  getPilihKain(){
 11. **Perulangan** adalah statement kontrol yang digunakan untuk menjalankan blok kode berulang kali. Pada kode ini, digunakan loop `while` untuk meminta input dan menampilkan data.
 
 ```bash
+string jawab;
 boolean running = true;
 while (running){
+System.out.println("Cetak Struk?");
+System.out.print("YA/TIDAK (Untuk Data Baru): ");
 jawab = scanner.nextLine();
 if(jawab.equalsIgnoreCase("ya")){
 running = false;
@@ -198,6 +201,18 @@ running = false;
 Scanner scanner = new Scanner(System.in);
 Scanner input = new Scanner(System.in);
 
+            System.out.println("========================================="); 
+            System.out.println("            TOKO KAIN GWEHJ              ");
+            System.out.println(" MENYEDIAKAN KAIN TRADISIONAL INDONESIA  ");
+            System.out.println("JL.IN.AJA.DULU km29,9 Bati-Bati wkwkwkwk ");
+            System.out.println("=========================================");           
+            System.out.println("1. KAIN BATIK         :  Rp 50000,-");
+            System.out.println("2. KAIN SASIRANGAN    :  Rp 80000,-");
+            System.out.println("3. KAIN SONGKET       :  Rp 150000,-");
+            System.out.println("=========================================");
+            System.out.println("");
+            System.out.println("MASUKKAN DATA CUSTOMER ");
+            System.out.println("-----------------------");
             System.out.println("Pelanggan Ke : ");
             String pembeli = scanner.nextLine();
             System.out.println("");
@@ -214,13 +229,21 @@ Scanner input = new Scanner(System.in);
             System.out.println("");
             System.out.println("Masukkan Tanggal : ");
             String tanggal = scanner.nextLine();
-            System.out.println("");
-            System.out.println("Cetak Struk?");
-            System.out.print("YA/TIDAK (Untuk Data Baru): ");
+
             
-            jawab = scanner.nextLine();
-            if(jawab.equalsIgnoreCase("ya")){
-                running = false;
+            int kain = 0;
+            if ("btk".equals(jenis)){
+                kain = jumlahMeter * Batik;
+            } else if ("ssr".equals(jenis)){
+                    kain = jumlahMeter * Sasirangan;
+            } else if ("skt".equals(jenis)){
+                    kain = jumlahMeter * Songket;
+            }    
+            
+            int total = kain;
+
+            System.out.println(kn[0].displayInfo());
+
             }
 ```
 
